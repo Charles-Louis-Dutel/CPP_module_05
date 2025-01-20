@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:10:13 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/14 01:22:00 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 13:25:35 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ class	Bureaucrat
 
 		void		incrementGrade(void);
 		void		decrementGrade(void);
-		void		signForm(AForm &inst);
+		void		signForm(AForm &form);
+		void		executeForm(AForm &form);
 
 		class GradeTooHighException : public std::exception
 		{

@@ -1,5 +1,7 @@
 {
 	"files.associations": {
+		"ft_memcpy": "c",
+		"stdlib.h": "c",
 		"array": "cpp",
 		"atomic": "cpp",
 		"bit": "cpp",
@@ -46,6 +48,7 @@
 		"span": "cpp",
 		"stdexcept": "cpp",
 		"streambuf": "cpp",
-		"typeinfo": "cpp"
+		"typeinfo": "cpp",
+		"fstream": "cpp"
 	}
 }

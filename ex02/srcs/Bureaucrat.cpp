@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:11:32 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/14 01:22:37 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 13:34:04 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,16 +81,34 @@ void	Bureaucrat::decrementGrade(void)
 	this->_Grade++;
 }
 
-void	Bureaucrat::signForm(AForm &inst)
+void	Bureaucrat::signForm(AForm &form)
 {
 	try
 	{
-		inst.beSigned(*this);
-		std::cout << this->_Name << " signed " << inst.getName() << std::endl;
+		form.beSigned(*this);
+		std::cout << this->_Name << " signed " << form.getName() << std::endl;
 	}
 	catch(AForm::GradeTooLowException &e)
 	{
-		std::cout << this->_Name << " couldn't sign " << inst.getName();
+		std::cout << this->_Name << " couldn't sign " << form.getName();
+		std::cout << " because " << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm &form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->_Name << " executed " << form.getName() << std::endl;
+	}
+	catch(AForm::FormIsNotSignedException &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch(AForm::GradeTooLowException &e)
+	{
+		std::cout << this->_Name << " couldn't execute " << form.getName();
 		std::cout << " because " << e.what() << std::endl;
 	}
 }

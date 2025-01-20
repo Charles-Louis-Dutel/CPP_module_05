@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:57:22 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/14 01:03:45 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 13:50:49 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,19 +70,12 @@ int	AForm::getRequiredToSign(void) const
 	return (this->_required_to_sign);
 }
 
+
+/*Protected member functions*/
 void	AForm::setIsSigned(bool set)
 {
 	this->_is_signed = set;
 }
-
-// void	AForm::beSigned(Bureaucrat const &bureaucrat)
-// {
-// 	if (bureaucrat.getGrade() > this->_required_to_sign)
-// 	{
-// 		throw AForm::GradeTooLowException();
-// 	}
-// 	this->_is_signed = 1;
-// }
 
 
 /*Ostream overload*/

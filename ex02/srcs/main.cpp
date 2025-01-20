@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:12:07 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/17 05:59:55 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 14:45:54 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,28 @@ int	main(void)
 	try
 	{
 		std::cout << "*****Testing ShrubberyCreationForm*****" << std::endl;
-		Bureaucrat	bur("Bob", 146);
-		Bureaucrat	bur2("Carl", 145);
-		Bureaucrat	bur3("John", 137);
+		Bureaucrat	cant_sign("Bob", 146);
+		Bureaucrat	cant_exec("Carl", 145);
+		Bureaucrat	can_all("John", 137);
 
 		ShrubberyCreationForm	shrub("Patrick");
+
 		std::cout << shrub << std::endl;
-		std::cout << bur2 << std::endl;
-		shrub.beSigned(bur2);
+		std::cout << cant_sign << std::endl;
+		cant_sign.signForm(shrub);
 		std::cout << std::endl;
 
 		std::cout << shrub << std::endl;
-		std::cout << bur << std::endl;
-		shrub.beSigned(bur);
+		std::cout << cant_exec << std::endl;
+		cant_exec.executeForm(shrub);
+		cant_exec.signForm(shrub);
+		cant_exec.executeForm(shrub);
 		std::cout << std::endl;
 
-		std::cout << shrub << std::endl << std::endl;
+		std::cout << shrub << std::endl;
+		std::cout << can_all << std::endl;
+		can_all.signForm(shrub);
+		can_all.executeForm(shrub);
 	}
 	catch (Bureaucrat::GradeTooHighException &e)
 	{
@@ -54,33 +60,34 @@ int	main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	catch (AForm::FormIsNotSignedException &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
 
 
-
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl << std::endl << std::endl;
 	try
 	{
 		std::cout << "*****Testing RobotomyRequestForm*****" << std::endl;
-		Bureaucrat	bur("Bob", 73);
-		Bureaucrat	bur2("Carl", 72);
-		Bureaucrat	bur3("John", 45);
+		Bureaucrat	cant_sign("Bob", 73);
+		Bureaucrat	cant_exec("Carl", 72);
+		Bureaucrat	can_all("John", 45);
 
-		RobotomyRequestForm	robot("Patrick");
+		RobotomyRequestForm	robot("Bender");
+
 		std::cout << robot << std::endl;
-		std::cout << bur2 << std::endl;
-		robot.beSigned(bur2);
+		std::cout << cant_sign << std::endl;
+		cant_sign.signForm(robot);
 		std::cout << std::endl;
 
 		std::cout << robot << std::endl;
-		std::cout << bur << std::endl;
-		robot.beSigned(bur);
+		std::cout << cant_exec << std::endl;
+		cant_exec.executeForm(robot);
+		cant_exec.signForm(robot);
+		cant_exec.executeForm(robot);
 		std::cout << std::endl;
 
-		std::cout << robot << std::endl << std::endl;
+		std::cout << robot << std::endl;
+		std::cout << can_all << std::endl;
+		can_all.signForm(robot);
+		can_all.executeForm(robot);
 	}
 	catch (Bureaucrat::GradeTooHighException &e)
 	{
@@ -98,33 +105,34 @@ int	main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	catch (AForm::FormIsNotSignedException &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
 
 
-
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl << std::endl << std::endl;
 	try
 	{
 		std::cout << "*****Testing PresidentialPardonForm*****" << std::endl;
-		Bureaucrat	bur("Bob", 26);
-		Bureaucrat	bur2("Carl", 25);
-		Bureaucrat	bur3("John", 5);
+		Bureaucrat	cant_sign("Bob", 26);
+		Bureaucrat	cant_exec("Carl", 25);
+		Bureaucrat	can_all("John", 5);
 
 		PresidentialPardonForm	pres("Patrick");
+
 		std::cout << pres << std::endl;
-		std::cout << bur2 << std::endl;
-		pres.beSigned(bur2);
+		std::cout << cant_sign << std::endl;
+		cant_sign.signForm(pres);
 		std::cout << std::endl;
 
 		std::cout << pres << std::endl;
-		std::cout << bur << std::endl;
-		pres.beSigned(bur);
+		std::cout << cant_exec << std::endl;
+		cant_exec.executeForm(pres);
+		cant_exec.signForm(pres);
+		cant_exec.executeForm(pres);
 		std::cout << std::endl;
 
-		std::cout << pres << std::endl << std::endl;
+		std::cout << pres << std::endl;
+		std::cout << can_all << std::endl;
+		can_all.signForm(pres);
+		can_all.executeForm(pres);
 	}
 	catch (Bureaucrat::GradeTooHighException &e)
 	{
@@ -139,10 +147,6 @@ int	main(void)
 		std::cerr << e.what() << std::endl;
 	}
 	catch (AForm::GradeTooLowException &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	catch (AForm::FormIsNotSignedException &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}

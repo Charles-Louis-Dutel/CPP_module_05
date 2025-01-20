@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 23:08:45 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/17 05:57:36 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 13:23:51 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm	&operator=(ShrubberyCreationForm const &inst);
 
 		virtual void			beSigned(Bureaucrat const &bureaucrat);
-		virtual void			execute(Bureaucrat const &executor);
+		virtual void			execute(Bureaucrat const &executor) const;
 
 	private:
 		std::string	_target;

@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 23:31:19 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/17 05:58:46 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 13:59:02 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ShrubberyCreationForm::beSigned(Bureaucrat const &bureaucrat)
 	this->setIsSigned(1);
 }
 
-void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
+void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	std::ofstream	outfile;
 
@@ -63,7 +63,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 	{
 		throw AForm::GradeTooLowException();
 	}
-	outfile.open(this->_target + "shrubbery");
+	std::string	name = this->_target + "_shrubbery";
+	outfile.open(name.c_str());
 	if (!outfile.is_open())
 	{
 		std::cerr << "Error opening shrubbery outfile" << std::endl;

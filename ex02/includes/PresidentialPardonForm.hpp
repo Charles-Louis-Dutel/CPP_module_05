@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:01:04 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/17 04:26:17 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 14:43:38 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class	PresidentialPardonForm : public AForm
 		PresidentialPardonForm	&operator=(PresidentialPardonForm const &inst);
 
 		virtual void			beSigned(Bureaucrat const &bureaucrat);
-		virtual void			execute(Bureaucrat const &executor);
+		virtual void			execute(Bureaucrat const &executor) const;
 
 	private:
 		std::string	_target;

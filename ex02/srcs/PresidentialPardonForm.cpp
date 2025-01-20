@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:09:05 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/17 05:02:20 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/01/20 14:43:43 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string const target) : AForm
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &copy)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &copy) : AForm(copy)
 {
 	this->_target = copy._target;
 }
@@ -51,7 +51,7 @@ void	PresidentialPardonForm::beSigned(Bureaucrat const &bureaucrat)
 	this->setIsSigned(1);
 }
 
-void	PresidentialPardonForm::execute(Bureaucrat const &executor)
+void	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
 	if (this->getIsSigned() != 1)
 	{
@@ -61,5 +61,6 @@ void	PresidentialPardonForm::execute(Bureaucrat const &executor)
 	{
 		throw AForm::GradeTooLowException();
 	}
+	std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }
 
