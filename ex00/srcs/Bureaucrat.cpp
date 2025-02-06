@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:11:32 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/13 17:29:50 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/02/06 14:42:05 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	Bureaucrat::decrementGrade(void)
 {
 	if (this->_Grade == 150)
 	{
-		throw Bureaucrat::GradeTooHighException();
+		throw Bureaucrat::GradeTooLowException();
 	}
 	this->_Grade++;
 }

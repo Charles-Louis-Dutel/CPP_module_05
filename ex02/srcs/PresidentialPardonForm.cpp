@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:09:05 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/20 14:43:43 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/02/06 15:37:04 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,3 @@ void	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 	}
 	std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }
-

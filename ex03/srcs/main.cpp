@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:12:07 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/20 16:18:49 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/02/06 15:48:26 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void)
 	Bureaucrat	can_do_all("Bob", 5);
 	AForm		*rrf;
 
-	std::cout << "*****Testing RobotomyRequestForm*****" << std::endl;
+	std::cout << "\033[33m*****Testing RobotomyRequestForm*****\033[0m" << std::endl;
 	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 	if (rrf)
 	{
@@ -33,7 +33,7 @@ int	main(void)
 	}
 	std::cout << std::endl;
 
-	std::cout << "*****Testing PresidentialPardonForm*****" << std::endl;
+	std::cout << "\033[34m*****Testing PresidentialPardonForm*****\033[0m" << std::endl;
 	rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
 	if (rrf)
 	{
@@ -43,7 +43,7 @@ int	main(void)
 	}
 	std::cout << std::endl;
 
-	std::cout << "*****Testing ShrubberyCreationForm*****" << std::endl;
+	std::cout << "\033[32m*****Testing ShrubberyCreationForm*****\033[0m" << std::endl;
 	rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
 	if (rrf)
 	{
@@ -53,7 +53,7 @@ int	main(void)
 	}
 	std::cout << std::endl;
 
-	std::cout << "*****Testing Invalid Form*****" << std::endl;
+	std::cout << "\033[31m*****Testing Invalid Form*****\033[0m" << std::endl;
 	rrf = someRandomIntern.makeForm("inexistant form", "Bender");
 	if (rrf)
 	{

@@ -6,12 +6,12 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 14:57:33 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/20 15:30:51 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/02/06 15:45:53 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INTERN_HPP
-# define INETRN_HPP
+# define INTERN_HPP
 
 # include "AForm.hpp"
 # include "PresidentialPardonForm.hpp"

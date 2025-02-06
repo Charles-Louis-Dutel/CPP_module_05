@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:12:07 by cdutel            #+#    #+#             */
-/*   Updated: 2025/01/20 14:45:54 by cdutel           ###   ########.fr       */
+/*   Updated: 2025/02/06 15:38:50 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 {
 	try
 	{
-		std::cout << "*****Testing ShrubberyCreationForm*****" << std::endl;
+		std::cout << "\033[32m*****Testing ShrubberyCreationForm*****\033[0m" << std::endl;
 		Bureaucrat	cant_sign("Bob", 146);
 		Bureaucrat	cant_exec("Carl", 145);
 		Bureaucrat	can_all("John", 137);
@@ -65,7 +65,7 @@ int	main(void)
 	std::cout << std::endl << std::endl << std::endl << std::endl;
 	try
 	{
-		std::cout << "*****Testing RobotomyRequestForm*****" << std::endl;
+		std::cout << "\033[31m*****Testing RobotomyRequestForm*****\033[0m" << std::endl;
 		Bureaucrat	cant_sign("Bob", 73);
 		Bureaucrat	cant_exec("Carl", 72);
 		Bureaucrat	can_all("John", 45);
@@ -110,7 +110,7 @@ int	main(void)
 	std::cout << std::endl << std::endl << std::endl << std::endl;
 	try
 	{
-		std::cout << "*****Testing PresidentialPardonForm*****" << std::endl;
+		std::cout << "\033[33m*****Testing PresidentialPardonForm*****\033[0m" << std::endl;
 		Bureaucrat	cant_sign("Bob", 26);
 		Bureaucrat	cant_exec("Carl", 25);
 		Bureaucrat	can_all("John", 5);
